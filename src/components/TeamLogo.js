@@ -1,5 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import T from 'prop-types';
 
 import logos from './logos';
 
@@ -12,8 +12,8 @@ export default function TeamLogo(props) {
 }
 
 TeamLogo.propTypes = {
-  id: PropTypes.string.isRequired,
-  width: PropTypes.string,
+  id: T.string.isRequired,
+  width: T.string,
 };
 
 TeamLogo.defaultProps = {
