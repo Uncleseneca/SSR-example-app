@@ -25,7 +25,6 @@ class TeamPage extends React.Component {
   render() {
     const { loading, teamNames, teamArticles } = this.state;
     const { match } = this.props;
-
     const { teamId } = match.params;
 
     if (loading === false && teamNames.includes(teamId) === false) {
