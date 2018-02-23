@@ -3,10 +3,13 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
 import Navbar from './Navbar';
 import Home from './Home';
-import Players from './Players';
-import Teams from './Teams';
-import TeamPage from './TeamPage';
-import Articles from './Articles';
+
+import DynamicImport from './DynamicImport';
+
+const Players = props => <DynamicImport componentPath="./Players" {...props} />;
+const Teams = props => <DynamicImport componentPath="./Teams" {...props} />;
+const TeamPage = props => <DynamicImport componentPath="./TeamPage" {...props} />;
+const Articles = props => <DynamicImport componentPath="./Articles" {...props} />;
 
 const App = () => (
   <BrowserRouter>
